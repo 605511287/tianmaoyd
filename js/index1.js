@@ -7,7 +7,6 @@ $(function () {
     var right=header1.querySelector(".right");
     var top1=header1.offsetHeight;
     var TOP=document.querySelector("#TIME").offsetTop;
-    console.log(TOP);
     $(window).scroll(function(){
         var top = $(this).scrollTop();
         if(top>top1){
@@ -52,10 +51,8 @@ $(function () {
         }
     })
     let timg=document.querySelector('.Timg')
-    console.log(timg)
     timg.ontouchstart=function(){
-        $(window).scrollTop(0)
-        console.log(1)
+        $('html').animate({scrollTop:0},1000)
     }
     // 轮播图
     var imgs=document.querySelectorAll(".imgs .imgbox");
